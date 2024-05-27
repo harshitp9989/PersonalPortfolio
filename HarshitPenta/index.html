@@ -7,56 +7,57 @@
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
     <link rel="stylesheet" href="assets\css\aos.css">
     <link rel="stylesheet" href="assets\css\line-awesome.min.css">
-    <Link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- NAVBAR START-->
+
+    <!--The <nav class="navbar d-flex flex-lg-column"> applies Bootstrap's flexbox utilities to the navbar. It ensures the navbar content is arranged in a column layout on large screens (≥992px) and in a row layout on smaller screens.-->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
 
-        <!--Logo(My name: Harshit Penta)-->
-          <a class="navbar-brand" href="#">
-            <span class="h3 fw-bold"> Harshit Penta</span>
-          </a>
-          
+        <!-- Wrapper div to center the content -->
+        <div class="container flex-lg-column ">
+            <!-- Logo -->
+            <!-- mb-lg-4 means margin bottom in large  -->
+            <a class="navbar-brand mb-lg-4 mx-lg-auto" href="#">
+                <!-- d-lg-none: This class sets the display property to none when the screen width is 992px (large breakpoint) or wider. It hides the element on large screens and larger devices. -->
+                <span class="h3 fw-bold d-block d-lg-none"> Harshit Penta</span>
+                <img src="assets/images/OneOnePhoto.jpg" class="d-none d-lg-block rounded-circle" alt="">
+            </a>
 
-          <!--The <button class="navbar-toggler" ...> element in your HTML code is used to create a toggle button for the navigation bar in a responsive Bootstrap layout. This button is specifically designed for small screens (like mobile devices) where the navigation menu might need to be collapsed to save space. -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <!--The <button class="navbar-toggler" ...> element in your HTML code is used to create a toggle button for the navigation bar in a responsive Bootstrap layout. This button is specifically designed for small screens (like mobile devices) where the navigation menu might need to be collapsed to save space. -->            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-          
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-            <!--The href="#Home" attribute refers to an element within the same webpage that has an id attribute set to Home. This is called an "anchor link" and it allows the user to jump to a specific part of the page when the link is clicked.-->
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#services">Services</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#work">Work</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#about">About</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#reviews">Reviews</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#Contact">Home</a>
-              </li>
-            </ul>
-          </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- text-lg-center is used to center the contents -->
+                <ul class="navbar-nav ms-auto flex-column text-lg-center ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    <!--NavBAR END-->
+    </nav>
+    <!-- NAVBAR END-->
     <script src="assets\js\aos.js"></script>
     <script src="assets\js\bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

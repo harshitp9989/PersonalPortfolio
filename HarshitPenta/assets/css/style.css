@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-
 :root {
     --color-body: #b6cbce;
     --color-heading: #eefbdb;
@@ -18,21 +17,55 @@ body {
     font-family: var(--font-base), sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
     font-weight: 700;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color-body);
     transition: all 0.4s ease;
 }
 
-a:hover{
+a:hover {
+    color:var(--color-brand); 
+}
+
+
+img {
+    width: 100%;
+}
+
+/* Navbar */
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.navbar .nav-link:hover{
+    color: var(--color-brand) !important;
+}
+
+.navbar .nav-link.active {
     color: var(--color-brand);
 }
 
-img{
-    width: 100%;
+.navbar-brand img{
+    border: 8px solid #033f47;
 }
+
+@media (min-width: 992px) {
+.navbar {
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    background: 
+        linear-gradient(rgba(3, 63, 71, 0.936), rgba(3, 63, 71, 0.081)), /* Semi-transparent overlay */
+        url(../images/side-bar3.jpg); /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+}
+
