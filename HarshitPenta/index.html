@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- NAVBAR START-->
 
     <!--The <nav class="navbar d-flex flex-lg-column"> applies Bootstrap's flexbox utilities to the navbar. It ensures the navbar content is arranged in a column layout on large screens (≥992px) and in a row layout on smaller screens.-->
@@ -70,30 +70,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h1 class="display-4 fw-bold"> I am a <span class="text-brand">Full Stack developer</span> from
-                            Los Angeles</h1>
-                        <p class="lead" mt-2 mb-4> With 4 years of experience and a master’s degree in computer science.
+                        <h1 class="display-4 fw-bold" data-aos="fade-up"> I am a <span class="text-brand">Full Stack
+                                developer</span> from Los Angeles, USA</h1>
+                        <p class="lead" mt-2 mb-4 data-aos="fade-up" data-aos-delay="300"> With 4 years of experience
+                            and a master’s degree in computer science.
                             Proficient in Agile/Scrum methodology and adept at implementing various stages of the
                             Software Development Life Cycle. </p>
-                        <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
-                        <a href="#" class="link-custom">Call: (818) 913 8121</a>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
+                            <a href="#" class="link-custom">Call: (818) 913 8121</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SERVICES  -->
-        <services id="services" class="full-height px-lg-5">
+        <section id="services" class="full-height px-lg-5">
             <div class="container">
-                <div class="row">
+                <div class="row pb-4" data-aos="fade-up-right" data-aos-delay="200">
                     <div class="col-lg-8">
                         <h6>SERVICES</h6>
                         <h1>Services that I provide</h1>
                     </div>
 
-                    <div class="row">
-                        
-                        <div class="col-md-4">
+                    <div class="row gy-4">
+
+                        <div class="col-md-4" data-aos="fade-up-right" data-aos-delay="400">
                             <div class="service p-4 bg-base rounded-4 shadow-effect">
                                 <div class="iconbox rounded-4">
                                     <i class="las la-feather"></i>
@@ -106,7 +109,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="service p-4 bg-base rounded-4 shadow-effect">
                                 <div class="iconbox rounded-4">
                                     <i class="las la-feather"></i>
@@ -119,7 +122,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4" data-aos="fade-up-left" data-aos-delay="200">
                             <div class="service p-4 bg-base rounded-4 shadow-effect">
                                 <div class="iconbox rounded-4">
                                     <i class="las la-feather"></i>
@@ -135,8 +138,75 @@
                     </div>
 
                 </div>
-        </services>
+            </section>
 
+        <!-- WORK  -->
+        <section id="work" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">WORK</h6>
+                        <h1>My Recent Projects</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-custom rounded-4 bg-base shadow-effect" >
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/shutterstock-1199480788.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Project 1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellendus velit id repellat repudiandae quidem provident nobis, asperiores rem consequuntur saepe tempora dignissimos qui quas suscipit nam praesentium officiis odit?</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-custom rounded-4 bg-base shadow-effect" >
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/shutterstock-1199480788.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Project 1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellendus velit id repellat repudiandae quidem provident nobis, asperiores rem consequuntur saepe tempora dignissimos qui quas suscipit nam praesentium officiis odit?</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-custom rounded-4 bg-base shadow-effect" >
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/shutterstock-1199480788.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Project 1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellendus velit id repellat repudiandae quidem provident nobis, asperiores rem consequuntur saepe tempora dignissimos qui quas suscipit nam praesentium officiis odit?</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-custom rounded-4 bg-base shadow-effect" >
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4" src="./assets/images/shutterstock-1199480788.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Project 1</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam repellendus velit id repellat repudiandae quidem provident nobis, asperiores rem consequuntur saepe tempora dignissimos qui quas suscipit nam praesentium officiis odit?</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
 
 
