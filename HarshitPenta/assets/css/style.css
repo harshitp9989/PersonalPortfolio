@@ -67,6 +67,7 @@ img {
     background-color: var(--color-base);
 }
 
+
 .text-brand{
     color:var(--color-brand);
 
@@ -81,14 +82,15 @@ img {
 }
 
 .shadow-effect:hover{
-    box-shadow: -4px 4px 0 0 var(--color-brand);
+    box-shadow: -3px 3px 0 0 var(--color-brand);
     transform: translate(2px, -2px);
     transition: transform 0.5s ease;
 }
 
 .glowEffect {
-    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.1); /* Shadow effect */
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.001); /* Shadow effect */
 }
+
 
 
 .iconbox {
@@ -116,10 +118,10 @@ img {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    width: 50px; 
-    height: 50px; 
+    width: 40px; 
+    height: 40px; 
     margin: 0 auto;
-    margin-top: 50px; /* Adjust spacing between icons */
+    margin-top: 15px; /* Adjust spacing between icons */
 }
 
 .iconSocial img {
@@ -217,30 +219,86 @@ img {
 /* CARD  */
 
 
-.card-custom .card-custom-image{
+.card-custom .card-custom-image {
     overflow: hidden;
+    height: 200px; /* Set a fixed height for the image container */
 }
 
-.card-custom:hover::after{
-    width:100%;
+.card-custom .card-custom-image img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.6s ease; /* Example transition for image scaling */
 }
 
-.card-custom .card-custom-image{
-    overflow: hidden;
-}
-
-.card-custom .card-custom-image img{
-    transition: all 0.6s ease;
-}
-
-.card-custom:hover .card-custom-image img{
-    transform: scale(1.1);
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1); /* Scale the image on hover */
 }
 
 .card-custom:hover {
-    transform: translate(2px, -2px);
-    transition: transform 0.5s ease;
+    transform: translate(2px, -2px); /* Example translation on hover */
 }
+
+@media (max-width: 768px) {
+    .card-custom {
+        margin-bottom: 2rem; /* Example margin for responsiveness, adjust as needed */
+    }
+}
+
+/* Highlights  */
+
+.highlights-custom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlights-custom-content {
+    flex: 1;
+}
+
+/* Optional: If you want to ensure images maintain aspect ratio */
+.highlights-custom-image img {
+    width: 100%;
+    height: auto;
+}
+
+.highlights-custom .highlights-custom-image {
+    overflow: hidden;
+    height: 200px; /* Set a fixed height for the image container */
+}
+
+.highlights-custom .highlights-custom-image img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.6s ease; /* Example transition for image scaling */
+}
+
+.highlights-custom:hover .highlights-custom-image img {
+    transform: scale(1.1); /* Scale the image on hover */
+}
+
+.highlights-custom:hover {
+    transform: translate(2px, -2px); /* Example translation on hover */
+}
+
+.highlights-custom .highlights-custom-image {
+    overflow: hidden;
+    height: 200px; /* Set a fixed height for the image container */
+}
+
+.highlights-custom .highlights-custom-image img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Fill the entire height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.highlights-custom .highlights-custom-content {
+    padding: 1.5rem; /* Adjust padding as needed */
+}
+
+
+
+
 
 /* --------Experience------------ */
 
@@ -284,15 +342,17 @@ img {
     right: 0
 }
 
-.main-timeline .icon:before,
-.main-timeline .icon:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
+@media (max-width: 767px) {
+    .main-timeline .icon:before,
+    .main-timeline .icon:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 .main-timeline .icon:before {
@@ -453,22 +513,24 @@ img {
     }
 }
 
-.contact-container{
-    height: 100vh;
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: space-evenly; */
+.contact-container {
+    /* height: 100vh; */ /* Remove this line */
+    /* display: flex; */ /* Remove if not needed */
+    /* align-items: center; */ /* Remove if not needed */
+    /* justify-content: space-evenly; */ /* Remove if not needed */
 }
 
-.contact-left{
-    display:flex;
+.contact-left {
+    display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 20px; 
+    gap: 20px;
+    /* Adjust gap as needed */
 }
 
-.contact-inputs{
-    width: 400px;
+.contact-inputs {
+    width: 100%; /* Adjust width as needed */
+    max-width: 400px; /* Limit maximum width */
     height: 50px;
     border: none;
     outline: none;
@@ -476,29 +538,41 @@ img {
     border-radius: 50px;
 }
 
-.contact-left textarea{
+.contact-left textarea {
+    width: 100%; /* Adjust width as needed */
     height: 140px;
     padding-top: 15px;
     border-radius: 20px;
 }
 
-.contact-inputs:focus{
-    border: 1px solid  var(--color-brand);
-}
-
-.gradientButton{
+.gradientButton {
     display: flex;
     align-items: center;
     padding: 15px 30px;
-    font-size: 16 px;
-    color:#fff;
+    font-size: 16px;
+    color: #fff;
     gap: 10px;
     border: none;
     border-radius: 50px;
     background: linear-gradient(90deg, var(--color-base), var(--color-base2));
     cursor: pointer;
-
 }
+
+.iconSocial {
+    /* Adjust margin between icons as needed */
+    margin-bottom: 5px; /* Example margin bottom */
+    margin-top: 80px;
+}
+
+.iconSocial img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure the icons are round */
+}
+
+/* Adjust any other spacing or alignment issues as needed */
+
 
 span {
     content: "\21DB";
@@ -520,3 +594,19 @@ span {
     margin-right: -9px; /* Move the image 15px upwards */
 
 }
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the container takes full width */
+    margin: auto; /* Optional: Add some margin if needed */
+}
+
+.image-container img {
+    margin-top: 20px;
+    max-width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+

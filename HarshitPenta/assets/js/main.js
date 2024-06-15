@@ -15,3 +15,20 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const readMoreBtns = document.querySelectorAll(".read-more-btn");
+
+  readMoreBtns.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+          const text = this.previousElementSibling; // Assuming the text to expand is just before the button
+          if (text.style.display === "none" || text.style.display === "") {
+              text.style.display = "block";
+              this.textContent = "Read Less";
+          } else {
+              text.style.display = "none";
+              this.textContent = "Read More";
+          }
+      });
+  });
+});
