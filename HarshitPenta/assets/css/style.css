@@ -77,13 +77,18 @@ img {
     background-color: var(--color-base);
 }
 
-.shadow-effect{
+.shadow-effect, .shadow-effect2{
     transition:all 0.5s;
 }
 
 .shadow-effect:hover{
     box-shadow: -3px 3px 0 0 var(--color-brand);
     transform: translate(2px, -2px);
+    transition: transform 0.5s ease;
+}
+
+.shadow-effect2:hover{
+    transform: translate(-2px, 2px);
     transition: transform 0.5s ease;
 }
 
@@ -530,11 +535,12 @@ img {
 
 .contact-inputs {
     width: 100%; /* Adjust width as needed */
-    max-width: 400px; /* Limit maximum width */
-    height: 50px;
+    max-width: 500px; /* Limit maximum width */
+    height: 45px;
     border: none;
     outline: none;
     padding-left: 25px;
+    color: white;
     border-radius: 50px;
 }
 
@@ -555,6 +561,19 @@ img {
     border: none;
     border-radius: 50px;
     background: linear-gradient(90deg, var(--color-base), var(--color-base2));
+    cursor: pointer;
+}
+
+.gradientButton2 {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: var(--color-base);
     cursor: pointer;
 }
 

@@ -32,3 +32,15 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const profileImage = document.getElementById("profileImage");
+    const imageContainer = document.getElementById("imageContainer");
+    const contactForm = document.getElementById("contactForm");
+
+    profileImage.addEventListener("click", function() {
+        imageContainer.style.display = "none";
+        contactForm.style.display = "block";
+    });
+});
+
