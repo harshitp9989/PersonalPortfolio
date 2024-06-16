@@ -584,9 +584,6 @@ img {
     border-radius: 50%; /* Ensure the icons are round */
 }
 
-
-
-
 /* Adjust any other spacing or alignment issues as needed */
 
 
@@ -626,3 +623,35 @@ span {
 }
 
 
+/* home screen bg  */
+/* Default styles */
+#home {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above background */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    #home {
+        background-image: url('../images/bgdp.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Ensures the background image remains fixed */
+    }
+
+    /* Overlay styles if needed */
+    #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
+    }
+}
