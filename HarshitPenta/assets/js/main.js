@@ -33,10 +33,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '.navbar'
-  });
-  
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth < 992) { // Check if screen size is less than large
+                var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     const profileImage = document.getElementById("profileImage");
     const imageContainer = document.getElementById("imageContainer");

@@ -59,13 +59,8 @@ body, html {
 }
 
 .navbar .nav-link:hover {
-    color: var(--color-brand) !important;
+    color: var(--color-brand);
 }
-
-.navbar .nav-link.active {
-    color: var(--color-brand)
-}
-
 
 .navbar-brand img {
     border: 8px solid #033f47;
@@ -581,9 +576,15 @@ body, html {
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background: radial-gradient(circle, var(--color-base)20% , var(--color-base) 10%, var(--color-base2)); 
+    background: radial-gradient(circle, var(--color-base)10%, var(--color-base) 0%, var(--color-base2)); 
     cursor: pointer;
+    transition: background 2s cubic-bezier(0.23, 1, 0.32, 1); /* Adjust the cubic-bezier values */
 }
+
+.gradientButton2:hover {
+    background: radial-gradient(circle, var(--color-base) 5%, var(--color-base) 30%, var(--color-base2)); 
+}
+
 
 .iconSocial img {
     width: 100%;
@@ -641,6 +642,19 @@ span {
 .container {
     position: relative;
     z-index: 1; /* Ensure content is above background */
+}
+
+/* For phone number  */
+.d-flex {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.ml-3 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 /* Media query for mobile screens */

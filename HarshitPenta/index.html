@@ -14,56 +14,44 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">
+<body>
     <!-- NAVBAR START-->
-
-    <!-- The <nav class="navbar d-flex flex-lg-column"> applies Bootstrap's flexbox utilities to the navbar. It ensures the navbar content is arranged in a column layout on large screens (≥992px) and in a row layout on smaller screens.-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-
-        <!-- Wrapper div to center the content -->
-        <div class="container flex-lg-column ">
-            <!-- Logo -->
-            <!-- mb-lg-4 means margin bottom in large  -->
-            <a class="navbar-brand mb-lg-4 mx-lg-auto" href="#">
-                <!-- d-lg-none: This class sets the display property to none when the screen width is 992px (large breakpoint) or wider. It hides the element on large screens and larger devices. -->
-                <span class="h3 fw-bold d-block d-lg-none"> Harshit Penta</span>
-                <img src="assets/images/profile-pic (1).png" class="d-none d-lg-block rounded-circle" alt="">
-            </a>
-
-            <!--The <button class="navbar-toggler" ...> element in your HTML code is used to create a toggle button for the navigation bar in a responsive Bootstrap layout. This button is specifically designed for small screens (like mobile devices) where the navigation menu might need to be collapsed to save space. -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- text-lg-center is used to center the contents -->
-                <ul class="navbar-nav ms-auto flex-column text-lg-center ">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#work">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#highlights">Highlights</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container flex-lg-column">
+        <a class="navbar-brand mb-lg-4 mx-lg-auto" href="#">
+            <span class="h3 fw-bold d-block d-lg-none"> Harshit Penta</span>
+            <img src="assets/images/profile-pic (1).png" class="d-none d-lg-block rounded-circle" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto flex-column text-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#work">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#highlights">Highlights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
-    </nav>
-    <!-- NAVBAR END -->
+    </div>
+</nav>
+<!-- NAVBAR END -->
+
 
     <!-- CONTENT WRAPPER -->
     <div id="content-wrapper">
@@ -81,7 +69,7 @@
                             Software Development Life Cycle. </p>
                         <div data-aos="fade-up" data-aos-delay="600">
                             <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
-                            <a href="tel:818-913-8121" class="link-custom">Call: (818) 913 8121</a>
+                            <a href="tel:818-913-8121" class="link-custom" style="margin-left: 15px;">Call: (818) 913 8121</a>
                         </div>
                     </div>
                 </div>
@@ -574,70 +562,65 @@
                         </form>
                     </div>
 
-                    <div class="col-lg-4 contact-container gradientButton2 " style="align-content: center; ">
+                    <div class="col-lg-4 contact-container gradientButton2" style="align-content: center;">
                         <div class="contact-info">
-                            <!-- <p>Feel free to contact me with any inquiries, to start a project, or simply to connect.</p> -->
-                            <!-- <p><strong>Email:</strong> harshit.penta@gmail.com</p>
-                            <p><strong>Phone:</strong> +1 (818) 913-8121</p>
-                            <p><strong>Address:</strong> 9730, Zelzah Ave</p> -->
-                            <div class="row ">
-            
-                                <div class="row-1 row-md-0 mb-0">
-                                    <div class="col-2 col-md-2 mb-1" >
-                                        <span class="icon-link" target="_blank">
-                                            <div class="d-flex align-items-center">
-                                                <div class="iconSocial shadow-effect">
-                                                    <img src="./assets/images/email.jpeg" alt="Email">
-                                                </div>
-                                                <div class="ml-3" style="padding-left:20px; padding-top: 5px;">
-                                                    <strong>harshit.penta@gmail.com</strong>
-                                                </div>
+                            <!-- Email -->
+                            <div class="row row-1 row-md-0 mb-0">
+                                <div class="col-2 col-md-2 mb-1">
+                                    <a href="mailto:harshit.penta@gmail.com" class="icon-link" target="_blank">
+                                        <div class="d-flex align-items-center">
+                                            <div class="iconSocial shadow-effect">
+                                                <img src="./assets/images/email.jpeg" alt="Email">
                                             </div>
-                                        </span>
-                                    </div>
-                                </div>
-            
-                                <div class="row-1 row-md-0 mb-0">
-                                    <div class="col-2 col-md-2 mb-1" >
-                                        <span class="icon-link" target="_blank">
-                                            <div class="d-flex align-items-center">
-                                                <div class="iconSocial shadow-effect">
-                                                    <img src="./assets/images/phone.jpg" alt="Email">
-                                                </div>
-                                                <div class="ml-3" style="padding-left:20px; padding-top: 5px;">
-                                                    <strong>8189138121</strong>
-                                                </div>
+                                            <div class="ml-3" style="padding-left: 20px; padding-top: 5px;">
+                                                <strong>harshit.penta@gmail.com</strong>
                                             </div>
-                                        </span>
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
-
-                                <div class="row-1 row-md-0 mb-0">
-                                    <div class="col-2 col-md-2 mb-1" >
-                                        <span class="icon-link" target="_blank">
-                                            <div class="d-flex align-items-center">
-                                                <div class="iconSocial shadow-effect">
-                                                    <img src="./assets/images/location.png" alt="Email">
-                                                </div>
-                                                <div class="ml-3" style="padding-left:20px; padding-top: 5px;">
-                                                    <strong>9730_Zelzah_Avenue</strong>
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </div>
-                                </div>
-
-
                             </div>
+                    
+                            <!-- Phone -->
+                            <div class="row row-1 row-md-0 mb-0">
+                                <div class="col-2 col-md-2 mb-1">
+                                    <a href="tel:+18189138121" class="icon-link" target="_blank">
+                                        <div class="d-flex align-items-center">
+                                            <div class="iconSocial shadow-effect">
+                                                <img src="./assets/images/phone.jpg" alt="Phone">
+                                            </div>
+                                            <div class="ml-3" style="padding-left: 20px; padding-top: 5px;">
+                                                <strong>+1 (818) 913-8121</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                    
+                        <!-- Location -->
+                        <div class="row row-1 row-md-0 mb-0">
+                            <div class="col-2 col-md-2 mb-1">
+                                <a href="https://maps.google.com/?q=34.247242026840844,-118.52288584562136" class="icon-link" target="_blank">
+                                    <div class="d-flex align-items-center">
+                                        <div class="iconSocial shadow-effect">
+                                            <img src="./assets/images/location.png" alt="Location">
+                                        </div>
+                                        <div class="ml-3" style="padding-left: 20px; padding-top: 5px;">
+                                            <strong>9730 Zelzah Avenue</strong>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
-                        </div> 
+                    
+                        </div>
                         <div class="resume shadow-effect2">
                             <a href="./assets/HarshitPentaResume.docx" download>
                                 <img src="./assets/images/resumeButton-removebg-preview.png" style="height: 120px; width: 120px;" alt="Download Resume">
                             </a>
                         </div>
-                          
                     </div>
+                    
                     
         
                     
