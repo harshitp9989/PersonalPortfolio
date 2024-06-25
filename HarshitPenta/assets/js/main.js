@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '.navbar'
+  });
+  
 document.addEventListener("DOMContentLoaded", function() {
     const profileImage = document.getElementById("profileImage");
     const imageContainer = document.getElementById("imageContainer");
