@@ -679,3 +679,63 @@ span {
         background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
     }
 }
+
+/* Hide mobile buttons on desktop */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+/* Hide desktop buttons on mobile */
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    /* Center the resume button */
+    margin-top: 20px;
+    /* Add some space above the button */
+}
+
+.resume-button {
+    max-width: 150px;
+    /* Adjust the max width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s;
+    /* Add a transition effect for hover */
+}
+
+/* Optional: Scale the button on hover */
+.resume-button:hover {
+    transform: scale(1.1);
+    /* Increase size slightly on hover */
+}
+/* Default styles */
+.mobile-only {
+    display: none;
+    /* Hidden by default */
+}
+
+.desktop-only {
+    display: block;
+    /* Show by default */
+}
+
+/* For screens smaller than 768px (mobile view) */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: block;
+        /* Show mobile button */
+    }
+
+    .desktop-only {
+        display: none;
+        /* Hide desktop button */
+    }
+}
